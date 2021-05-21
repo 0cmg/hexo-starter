@@ -1,10 +1,12 @@
 ---
 title: {{ title }}
 date: {{ date }}
+author: cmg
+urlname: 
 top: false
 cover: false
-password:
-summary:
 tags:
 categories:
+password:
+summary:
 ---

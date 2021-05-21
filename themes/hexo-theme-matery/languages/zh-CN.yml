@@ -7,7 +7,6 @@ archives: 归档
 about: 关于
 contact: 留言板
 friends: 友情链接
-links: 链接库
 startRead: 开始阅读
 recommendedPosts: 推荐文章
 publishDate: 发布日期
@@ -73,4 +72,4 @@ checkPolicy: 查看
 siteTotalWords: 站点总字数
 siteTotalVisits: 总访问量
 siteTotalVisitors: 总访问人数
-galleries: 相册
+links: 链接库
