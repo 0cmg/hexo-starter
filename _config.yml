@@ -3,18 +3,24 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: CMG's Blog
+subtitle: 最怕一生碌碌无为，还说平凡难能可贵
+description: Life == Coding; Enjoy Life == Enjoy Coding;
+keywords: CMG, github
+author: cmg
+mail: copgwq@163.com
+language: zh-CN
+timezone:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: https://0cmg.github.io
+root: /cmg.githua.io/
+#permalink: :year/:month/:day/:urlname/
+permalink: p/:abbrlink.html # p 是自定义的前缀
+abbrlink:
+  alg: crc32 #算法： crc16(default) and crc32
+  rep: hex #进制： dec(default) and hex
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -29,6 +35,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - aboutme/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -37,31 +44,45 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
+
+# 关闭原有的代码高亮，使用自己的
+prism_plugin:
+  mode: "preprocess" # realtime/preprocess
+  theme: "tomorrow"
+  line_number: false # default false
+  custom_css:
+
+#字数统计
+wordCount:
+  enable: false # 将这个值设置为 true 即可.
+  postWordCount: true
+  min2read: true
+  totalCount: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -81,7 +102,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -97,9 +118,70 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-matery
+#搜索
+search:
+  path: search.xml
+  field: post
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: "git"
+  repository: git@github.com:0cmg/cmg.githua.io.git
+  branch: master
+#漫画轮播
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: right
+    width: 75
+    height: 150
+  mobile:
+    show: true
+    react:
+      opacity: 0.7
+#关于我
+About:
+  url: /
+  icon: fas fa-address-card
+  children:
+    - name: about
+      url: /about
+      icon: fas fa-user-circle
+    - name: Another #这是新添加的，在原有配置基础上添加
+      url: /aboutme
+      icon: fa fa-user-secret
+
+#表情
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+#订阅
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: " "
+  order_by: -date
+
+# 搜索功能配置
+algolia:
+  applicationID: FK0HC3120U
+  apiKey: 29c3526bffdd842d31cdb41c13be8882
+  indexName: hexo
