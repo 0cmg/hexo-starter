@@ -232,6 +232,10 @@
         left: unset;
         visibility: visible;
     }
+    .v[data-class="v"] .vwrap .vheader .vinput {
+      width: 32%;
+      border-bottom: 1px dashed #dedede;
+    }
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
@@ -248,8 +252,11 @@
 <script>
     new Valine({
         el: '#vcomments',
+        admin_email: 'copgwq@163.com',
         enableQQ: true,
         boolean: true,
+        comment_count: true,
+        path: window.location.pathname,
         appId: '<%- theme.valine.appId %>',
         appKey: '<%- theme.valine.appKey %>',
         notify: '<%- theme.valine.notify %>' === 'true',
@@ -260,6 +267,18 @@
         lang: '<% if (theme.valine.language == "zh-CN") {  %>zh-cn<% } else { %>en<% } %>',
         requiredFields: ['nick', 'mail'],
         placeholder: '<%= theme.valine.placeholder %>'
+    });
+    $(document).ready(function(){
+        $("#vcomments").on('click', 'span.vat',function(){
+            $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+            $('textarea#veditor').focus();
+        })
+    })
+</script><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
     });
 </script>
 

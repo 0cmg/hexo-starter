@@ -318,7 +318,8 @@ valine:
   appId: woYkRPf2f4zCRN8PQIsIEDQL-gzGzoHsz
   appKey: NS40y7sfwzrQIiJ603yBSBWj
   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
-  verify: false # valine verify code (true/false)
+  verify: true # valine verify code (true/false)
+  visitor: true
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   lang: zh-cn # i18n: zh-CN/zh-TW/en/ja
