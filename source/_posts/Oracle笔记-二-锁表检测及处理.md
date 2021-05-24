@@ -1,7 +1,7 @@
 ---
 title: Oracle笔记(二)锁表检测及处理
 author: cmg
-top: false
+top: true
 cover: false
 abbrlink: 7b6bf07a
 date: 2021-05-21 14:13:44
@@ -13,6 +13,7 @@ tags:
 categories: 
   - Oracle锁表
 password:
+reprintPolicy: cc_by
 summary:
 ---
 

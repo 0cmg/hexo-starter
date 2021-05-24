@@ -3,14 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: CMG's Blog
+title: Blog
 subtitle: 最怕一生碌碌无为，还说平凡难能可贵
 description: Life == Coding; Enjoy Life == Enjoy Coding;
 keywords: CMG, github
 author: cmg
 mail: copgwq@163.com
 language: zh-CN
-timezone:
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -35,7 +35,12 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - aboutme/**
+  - 'tools/*'
+  - 'tools/**'
+  - 'GoogleHacking/*'
+  - 'GoogleHacking/**'
+  - 'Windows/*'
+  - 'Windows/**'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -44,7 +49,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ""
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -54,14 +59,14 @@ highlight:
   enable: false
   line_number: true
   auto_detect: false
-  tab_replace: ""
+  tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ""
+  tab_replace: ''
 
 # 关闭原有的代码高亮，使用自己的
 prism_plugin:
@@ -72,7 +77,7 @@ prism_plugin:
 
 #字数统计
 wordCount:
-  enable: false # 将这个值设置为 true 即可.
+  enable: true # 将这个值设置为 true 即可.
   postWordCount: true
   min2read: true
   totalCount: true
@@ -83,7 +88,7 @@ wordCount:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ""
-  per_page: 10
+  per_page: 12
   order_by: -date
 
 # Category & Tag
@@ -106,7 +111,7 @@ updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 6
 pagination_dir: page
 
 # Include / Exclude file(s)
@@ -118,7 +123,20 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-matery
+theme: luck-matery
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+#RSS订阅
+plugin:
+  - hexo-generator-feed
+  - hexo-generator-baidu-sitemap
+  - hexo-generator-sitemap
+baidusitemap:
+  path: baidusitemap.xml
+
+sitemap:
+  path: sitemap.xml
 #搜索
 search:
   path: search.xml
@@ -130,9 +148,10 @@ deploy:
   type: "git"
   repository: git@github.com:0cmg/cmg.githua.io.git
   branch: master
+
 #漫画轮播
 live2d:
-  enable: true
+  enable: false
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
@@ -160,7 +179,10 @@ About:
     - name: Another #这是新添加的，在原有配置基础上添加
       url: /aboutme
       icon: fa fa-user-secret
-
+# 中文链接转拼音
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
 #表情
 githubEmojis:
   enable: true
@@ -185,3 +207,8 @@ algolia:
   applicationID: FK0HC3120U
   apiKey: 29c3526bffdd842d31cdb41c13be8882
   indexName: hexo
+
+lazyload:
+  enable: false  # 是否开启图片懒加载
+  onlypost: true  # 是否只对文章的图片做懒加载
+  loadingImg: https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg # eg ./images/loading.gif

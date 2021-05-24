@@ -1,6 +1,6 @@
 ---
 title: JDK各个历史版本下载方法
-top: false
+top: true
 cover: false
 tags:
   - JDK
@@ -12,6 +12,7 @@ categories:
   - JDK
 abbrlink: b68953c6
 date: 2021-05-13 09:57:51
+reprintPolicy: cc_by
 password:
 summary:
 ---

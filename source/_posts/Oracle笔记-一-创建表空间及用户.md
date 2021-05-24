@@ -13,6 +13,7 @@ categories:
   - Oracle
 password:
 summary:
+reprintPolicy: cc_by
 abbrlink: 9dc7261d
 ---
 
