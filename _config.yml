@@ -162,23 +162,13 @@ live2d:
     use: live2d-widget-model-shizuku
   display:
     position: left
-    width: 150
-    height: 400
+    width: 120
+    height: 300
   mobile:
     show: true
     react:
       opacity: 0.7
-#关于我
-About:
-  url: /
-  icon: fas fa-address-card
-  children:
-    - name: about
-      url: /about
-      icon: fas fa-user-circle
-    - name: Another #这是新添加的，在原有配置基础上添加
-      url: /aboutme
-      icon: fa fa-user-secret
+
 # 中文链接转拼音
 permalink_pinyin:
   enable: true
