@@ -19,27 +19,27 @@ menu:
       - name: 标签
         url: /tags
         icon: fas fa-tag
-  List: 
+  List:
     icon: fas fa-heartbeat
-    children: 
-      - name: 音乐
-        url: /List/music
-        icon: fas fa-music
+    children:
+      #- name: 音乐
+      #  url: /List/music
+      #  icon: fas fa-music
       - name: 相册
         url: /List/galleries
         icon: fas fa-image
-      - name: 视频
-        url: /List/movies
-        icon: fas fa-film
+      #- name: 视频
+      #  url: /List/movies
+      #  icon: fas fa-film
   Contact:
     url: /contact
     icon: fas fa-envelope
   Navi:
     url: /tools
     icon: fas fa-suitcase
-  Windows:
-    url: /Windows
-    icon: fas fa-desktop
+  #Windows:
+  #  url: /Windows
+  #  icon: fas fa-desktop
   Friends:
     url: /friends
     icon: fas fa-link

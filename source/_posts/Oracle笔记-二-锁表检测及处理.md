@@ -7,11 +7,11 @@ abbrlink: 7b6bf07a
 date: 2021-05-21 14:13:44
 urlname: oracle_locked_table
 tags: 
-  - Oracle
+  - Oracle锁表
   - 锁表检测
   - 锁表处理
 categories: 
-  - Oracle锁表
+  - Oracle
 password:
 reprintPolicy: cc_by
 summary:

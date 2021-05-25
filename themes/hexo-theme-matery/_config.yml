@@ -622,3 +622,35 @@ algolia_search:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
     hits_stats: "${hits} results found in ${time} ms"
+
+# 在网上找的字体：我用的是Microsoft YaHei
+# “Helvetica Neue",” Helvetica, Arial“, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei"
+font:
+  enable: true
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  # 亲测这个可用，如果不可用，自己搜索 [Google 字体 国内镜像]，找个能用的就行
+  host: https://fonts.cat.net
+    # Global font settings used on <body> element.
+  # 全局字体，应用在 body 元素上
+  global:
+    external: true
+    family: Lato
+    size: 16
+    #csdn上就是16看着舒服多了
+  # 标题字体 (h1, h2, h3, h4, h5, h6)
+  headings:
+    external: true
+    family: Roboto Slab
+  # 文章字体
+  posts:
+    external: true
+    family:
+  # Logo 字体
+  logo:
+    external: true
+    family: Lobster Two
+    size: 24
+  # 代码字体，应用于 code 以及代码块
+  codes:
+    external: true
+    family: Roboto Mono
