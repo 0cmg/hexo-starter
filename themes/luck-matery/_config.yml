@@ -587,7 +587,7 @@ reprint:
 
 # DaoVoice online contact
 daovoice:
-  enable: true
+  enable: false
   app_id: 4xxxxxxxe   #DaoVoice中的app_id
 
 # Tidio online contact
