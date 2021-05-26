@@ -1,25 +1,23 @@
 [
   {
-    "name": "动漫风景",
-    "cover": "动漫风景/01.jpg",
-    "description": "动漫风景",
+    "name": "风景",
+    "cover": "landscape/20210526093130.jpg",
+    "description": "风景",
     "photos": [
-      "动漫风景/01.jpg",
-      "动漫风景/02.jpg",
-      "动漫风景/03.jpg",
-      "动漫风景/04.jpg",
-      "动漫风景/05.jpg",
-      "动漫风景/06.jpg",
-      "动漫风景/07.jpg",
-      "动漫风景/08.jpg",
-      "动漫风景/09.jpg",
-      "动漫风景/10.jpg",
-      "动漫风景/11.jpg",
-      "动漫风景/12.jpg",
-      "动漫风景/13.jpg",
-      "动漫风景/14.jpg",
-      "动漫风景/15.jpg",
-      "动漫风景/16.jpg"
+      "landscape/20210526093130.jpg",
+      "landscape/20210526093129.jpg",
+      "landscape/20210526093127.jpg",
+      "landscape/20210526093126.jpg",
+      "landscape/20210526093125.jpg",
+      "landscape/20210526093124.jpg",
+      "landscape/20210526093123.jpg",
+      "landscape/20210526093122.jpg",
+      "landscape/20210526093117.jpg",
+      "landscape/20210526093118.jpg",
+      "landscape/20210526093119.jpg",
+      "landscape/20210526093121.jpg",
+      "landscape/20210526093116.jpg",
+      "landscape/20210526093115.jpg"
     ]
   }
 ]

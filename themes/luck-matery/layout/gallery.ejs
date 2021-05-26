@@ -22,17 +22,15 @@ var currentGallery = getCurrentGallery(galleries, pageTitle)
 
 var photos = currentGallery.photos;
 
-let imageStr = ''
+let imageStr = '';
 
 for (var i = 0, len = photos.length; i < len; i++) {
     var photo = photos[i];
-
-
-<!-- 这儿的网址：http://sunhwee.com/ 改为你图片放的位置的网址，比如你用Github图床的话，就改为你图床的网址 -->
-    imageStr += "<a href=\"https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/" + photo + "\"\n" +
+    /*这儿的网址：http://sunhwee.com/ 改为你图片放的位置的网址，比如你用Github图床的话，就改为你图床的网址*/
+    imageStr += "<a href=\"https://raw.githubusercontent.com/0cmg/imgtu/develop/images/" + photo + "\"\n" +
             "     class=\"photo-item\" rel=\"example_group\"\n" +
             "     data-fancybox=\"images\">\n" +
-            "      <img src=\"https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/" + photo + "\"\n" +
+            "      <img src=\"https://raw.githubusercontent.com/0cmg/imgtu/develop/images/" + photo + "\"\n" +
             "       alt=" + photo + ">\n" +
             "    </a>"
 }

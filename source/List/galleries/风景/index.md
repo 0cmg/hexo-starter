@@ -1,5 +1,5 @@
 ---
-title: 动漫风景
+title: 风景
 type: "gallery"
 layout: "gallery"
 ---
