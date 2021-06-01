@@ -3,7 +3,6 @@ title: PicGo+GitHub搭建图床
 author: cmg
 top: false
 cover: false
-date: 2021-06-01 15:25:17
 urlname: picgo_github_images
 tags:
   - PicGo
@@ -11,8 +10,10 @@ tags:
   - 图床
 categories:
   - 图床
+summary: 使用PicGo + GitHub搭建免费图床
+abbrlink: e4df49cd
+date: 2021-06-01 15:25:17
 password:
-summary:使用PicGo + GitHub搭建免费图床
 ---
 
 ## PicGo + GitHub搭建图床
