@@ -11,8 +11,9 @@
             <% var gallery = galleries[i]; %>
             <div class="col s6 m4 l4 xl3 gallery-box">
                 <a href="./<%- gallery.name %>" class="gallery-item" data-aos="zoom-in-up">
-                    <div class="gallery-cover-box" style="background-image: url(https://raw.githubusercontent.com/0cmg/imgtu/develop/images/<%- gallery.cover%>);width: auto; height: auto;">
-                    </div>
+                    <img src="https://raw.githubusercontent.com/0cmg/imgtu/develop/images<%- gallery.cover%>" style="height: 8rem; width: 6rem;margin-top: 2ex;">
+                    <!--<div class="gallery-cover-box" style="background-image: url(https://raw.githubusercontent.com/0cmg/imgtu/develop/images<%- gallery.cover%>);">
+                    </div>-->
                     <p class="gallery-name">
                         <%- gallery.name %>
                     </p>

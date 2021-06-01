@@ -1,7 +1,7 @@
 [
   {
     "name": "风景",
-    "cover": "landscape/20210526102341.jpg",
+    "cover": "/landscape/20210526093122.jpg",
     "description": "风景",
     "photos": [
       "landscape/20210526102341.jpg",
@@ -11,7 +11,7 @@
       "landscape/20210526093125.jpg",
       "landscape/20210526093124.jpg",
       "landscape/20210526093123.jpg",
-      "landscape/20210526093122.jpg",
+      "landscape/20210526102341.jpg",
       "landscape/20210526093117.jpg",
       "landscape/20210526093118.jpg",
       "landscape/20210526093119.jpg",

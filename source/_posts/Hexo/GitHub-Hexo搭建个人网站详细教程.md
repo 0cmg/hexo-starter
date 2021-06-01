@@ -20,7 +20,9 @@ password:
 
 ### 前言
 
-> 随着互联网浪潮的翻腾，国内外涌现出越来越多优秀的社交网站让用户分享信息更加便捷。然后，如果你是一个不甘寂寞的程序猿（媛），是否也想要搭建一个属于自己的个人网站，如果你曾经或者现在正有这样的想法，请跟随这篇文章发挥你的Geek精神，让你快速拥有自己的博客网站，写文章记录生活，享受这种从0到1的过程。
+> 近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，不过可能不是特别稳定。
+>
+> 下面本文就详细介绍下使用Hexo + GitHub搭建免费个人博客网站的教程
 
 [你见过的最棒的个人博客界面是什么样的？](https://www.zhihu.com/question/29755481)
 
@@ -28,31 +30,40 @@ password:
 
 ![图一](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/hexo/20210527092725.png)
 
->Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。这里我们选用的是GitHub，你没看错，全球最大的同性恋交友网站（逃……）。Hexo同时也是GitHub上的开源项目，参见：[hexojs/hexo](https://link.zhihu.com/?target=https%3A//github.com/hexojs/hexo) 如果想要更加全面的了解Hexo，可以到其官网 [Hexo](https://link.zhihu.com/?target=https%3A//hexo.io/) 了解更多的细节，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。这里，默认各位猿/媛儿都知道GitHub就不再赘述。
->
->
+>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub上，是搭建博客的首选框架。这里我们选用的是GitHub。Hexo同时也是GitHub上的开源项目，参见：[hexojs/hexo](https://link.zhihu.com/?target=https%3A//github.com/hexojs/hexo) 如果想要更加全面的了解Hexo，可以到其官网 [Hexo](https://link.zhihu.com/?target=https%3A//hexo.io/) 了解更多的细节。
 
 ### **这是我的个人博客效果:** [Blog]([CMG's Blog1](https://0cmg.github.io/cmg.githua.io/))
 
 > 下面正式从零开始搭建年轻人的第一个网站。
 >
-> + 获得个人网站域名
-> + GitHub创建个人仓库
-> + 安装Git
-> + 安装Node.js
-> + 安装Hexo
-> + 推送网站
-> + 绑定域名
-> + 更换主题
-> + 初识MarkDown语法
-> + 发布文章
-> + 寻找图床
-> + 个性化设置
-> + 其他
+> 1. 获得个人网站域名
+>
+> 2. GitHub创建个人仓库
+>
+> 3. 安装Git
+>
+> 4. 安装Node.js
+>
+> 5. 安装Hexo
+>
+> 6. 推送网站
+>
+> 7. 绑定域名
+>
+> 8. 更换主题
+>
+> 9. 初识MarkDown语法
+>
+> 10. 发布文章
+>
+> 11. 寻找图床
+>
+> 12. 个性化设置
+>
 
 ### **获得个人网站域名**
 
-> 域名是网站的入口，也是网站的第一印象，比如饿了么的官网的域名是：[https://www.ele.me/](https://link.zhihu.com/?target=https%3A//www.ele.me/) ，很是巧妙。常见的有com,cn,net,org等后缀，也有小众的xyz,me,io等后缀，根据你自己的喜好，选择不同的后缀，比如我选择就是常见的com后缀。很多小众奇特的后缀在大陆是没办法备案的，网站也就无法上线。然而使用GitHub托管我们的网站，完全不需要备案，因为托管我们的网站内容的服务器在美国，而且在国内备案流程也比较繁杂，时间需要一周左右。
+> 域名是网站的入口，使用GitHub托管我们的网站，完全不需要备案，因为托管我们的网站内容的服务器在美国，而且在国内备案流程也比较繁杂，时间需要一周左右。
 >
 > 申请域名的地方有很多，这里推荐阿里云：[阿里云-为了无法计算的价值](https://link.zhihu.com/?target=https%3A//www.aliyun.com/) 申请入口：[域名注册](https://link.zhihu.com/?target=https%3A//wanwang.aliyun.com/domain/) 购买域名这也是我们整个搭建过程中惟一一个需要花钱的地方。如果你已经有了空闲域名就无需购买，直接使用即可。
 
@@ -60,11 +71,11 @@ password:
 
 > 登录到GitHub,如果没有GitHub帐号，使用你的邮箱注册GitHub帐号：[Build software better, together](https://link.zhihu.com/?target=https%3A//github.com/) 点击GitHub中的New repository创建新仓库，仓库名应该为：**用户名**.[http://github.io](https://link.zhihu.com/?target=http%3A//github.io) 这个**用户名**使用你的GitHub帐号名称代替，这是固定写法，比如我的仓库名为：
 
-![图二](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/hexo/20210527093146.jpg)
+![图二](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Git/20210528111723.png)
 
 ### **安装Git**
 
-> 什么是Git ?简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。如果想要了解Git的细节，参看[廖雪峰](https://link.zhihu.com/?target=http%3A//weibo.com/liaoxuefeng)老师的Git教程：[Git教程](https://link.zhihu.com/?target=http%3A//www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000) 从Git官网下载：[Git - Downloading Package](https://link.zhihu.com/?target=https%3A//git-scm.com/download/win) 现在的机子基本都是64位的，选择64位的安装包，下载后安装，在命令行里输入git测试是否安装成功，若安装失败，参看其他详细的Git安装教程。安装成功后，将你的Git与GitHub帐号绑定，鼠标右击打开Git Bash
+> 什么是Git ?简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。 从Git官网下载：[Git - Downloading Package](https://link.zhihu.com/?target=https%3A//git-scm.com/download/win) 选择合适自己的版本安装。安装成功后，将你的Git与GitHub帐号绑定，鼠标右击打开Git Bash
 
 ![图三](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Git/20210527093317.jpg)
 
@@ -84,7 +95,7 @@ password:
 > 然后直接三个回车即可，默认不需要设置密码
 > 然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制
 >
-> ![图四](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Git/20210527093512.jpg)
+> ![图四](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Git/20210528111923.png)
 >
 > 打开[GitHub_Settings_keys](https://link.zhihu.com/?target=https%3A//github.com/settings/keys) 页面，新建new SSH Key
 >
@@ -93,7 +104,7 @@ password:
 > Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。
 > 在Git Bash中检测GitHub公钥设置是否成功，输入 ssh git@github.com ：
 >
-> ![图六](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Git/20210527093514.jpg)
+> ![图六](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Git/20210528112036.png)
 >
 > 如上则说明成功。这里之所以设置GitHub密钥原因是，通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥跟GitHub上面的公钥是否是配对的，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是正确合法的。
 
@@ -220,19 +231,19 @@ password:
 
 > 虽然在Internet上可以访问我们的网站，但是网址是GitHub提供的:[http://xxxx.github.io](https://link.zhihu.com/?target=http%3A//xxxx.github.io) (知乎排版可能会出现"http://"字样) 而我们想使用我们自己的个性化域名，这就需要绑定我们自己的域名。这里演示的是在阿里云万网的域名绑定，在国内主流的域名代理厂商也就阿里云和腾讯云。登录到阿里云，进入管理控制台的域名列表，找到你的个性化域名，进入解析
 >
-> ![图十四](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210527170908.jpg)
+> ![图十四](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210528112331.png)
 >
 > 然后添加解析
 >
-> ![图十五](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210527170907.jpg)
+> ![图十五](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210528112916.png)
 >
 > 包括添加三条解析记录，192.30.252.153是GitHub的地址，你也可以ping你的 [http://xxxx.github.io](https://link.zhihu.com/?target=http%3A//xxxx.github.io) 的ip地址，填入进去。第三个记录类型是CNAME，CNAME的记录值是：你的用户名.[http://github.io](https://link.zhihu.com/?target=http%3A//github.io) 这里千万别弄错了。第二步，登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名
 >
-> ![图十六](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210527170906.jpg)
+> ![图十六](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210528113224.png)
 >
 > 点击save保存。第三步，进入本地博客文件夹 ，进入blog/source目录下，创建一个记事本文件，输入你的域名，对，只要写进你自己的域名即可。如果带有www，那么以后访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。所以建议，不要带有www。这里我还是写了www(不建议带有www):
 >
-> ![图十七](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210527170903.jpg)
+> ![图十七](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/Others/20210528113151.png)
 >
 > 保存，命名为CNAME ，注意保存成**所有文件**而不是**txt文件**。
 >
@@ -375,39 +386,7 @@ password:
 >
 > 有很多人私信问我High功能特效如何设置，这里推荐一篇同是Next主题网站博主的文章：[为Hexo Next主题添加哈林摇特效（五）](https://link.zhihu.com/?target=http%3A//www.iamlj.com/2016/08/add-special-effect-harlem-shake-for-hexo/)
 
-### **其他**
 
-> 终于写到这里了，也算是基本圆满完成了我的写作初衷，总结自己的一些经验，分享一些有趣的东西，不过脖子也是僵硬的受不了。我知道很多人想要建立自己的个人网站却一直没有付诸行动，希望这篇文章能给你一点点灵感与想法，just do it。本文是windows平台的搭建过程，其他平台可以参看相关资料，也有很多其他优秀的博客框架值得学习。如果有任何建议或想法、或疑问欢迎在评论区交流， 做好的网站不妨在评论区贴出网址，让大家一起学习。
-
-### **附录**
-
-> **以下是评论区贴出网址的博客展示：**
->
-> [...Miss.j BlogDiary...](https://link.zhihu.com/?target=http%3A//jmyblog.top/)
->
-> [RILWEIC](https://link.zhihu.com/?target=http%3A//ibb.chaodamiao.com/)
->
-> [Xin’s Notes](https://link.zhihu.com/?target=http%3A//blog.sunxinfei.com/)
->
-> [飞鸟与鱼](https://link.zhihu.com/?target=https%3A//guguant.github.io/)
->
-> [无名博客](https://link.zhihu.com/?target=http%3A//www.fuck-goods.tk/)
->
-> [iTesting软件测试知识分享](https://link.zhihu.com/?target=http%3A//helloqa.com/)
->
-> [赵小源的个人博客](https://link.zhihu.com/?target=http%3A//bolg.upsky.top/)
->
-> [华嘉熠’s Blog](https://link.zhihu.com/?target=http%3A//www.huajiayi.top/)
->
-> [Cocoon](https://link.zhihu.com/?target=http%3A//asmire.site/)
->
-> [罗少雄's Blog](https://link.zhihu.com/?target=https%3A//luoshaoxiong.github.io/)
->
-> [李四啊_](https://link.zhihu.com/?target=https%3A//lruihao.github.io/)
-
-### **其他优秀个人博客展示**
-
-> [翁天信 · Dandy Weng](https://link.zhihu.com/?target=https%3A//www.dandyweng.com/) [chaoxuprim](https://link.zhihu.com/?target=http%3A//chaoxuprime.com/) [KENJI ENDO](https://link.zhihu.com/?target=http%3A//kenjiendo.com/) [Moorez](https://link.zhihu.com/?target=http%3A//shenzekun.cn/) [CodeSky 代码之空](https://link.zhihu.com/?target=https%3A//codesky.me/) [大江东去](https://link.zhihu.com/?target=http%3A//www.helloshawn.cn/) [UI Design Portfolio of JJ Ying](https://link.zhihu.com/?target=http%3A//iconmoon.com/) [JeyZhang](https://link.zhihu.com/?target=http%3A//www.jeyzhang.com/) [jacklightChen | 得到的都是侥幸](https://link.zhihu.com/?target=http%3A//blog.lightina.cn/) [edwardtoday](https://link.zhihu.com/?target=https%3A//qingpei.me/) [Rafal Tomal - Web Designer and Genesis Developer](https://link.zhihu.com/?target=http%3A//rafaltomal.com/) [Projects and Work](https://link.zhihu.com/?target=http%3A//strml.net/) [绘画爱好者](https://link.zhihu.com/?target=http%3A//miaoxiaoer.com/) [万世奇的博客](https://link.zhihu.com/?target=http%3A//ursocute.github.io/) [Guillermo Rauch](https://link.zhihu.com/?target=https%3A//rauchg.com/)
 
 ### **相关文章**
 
