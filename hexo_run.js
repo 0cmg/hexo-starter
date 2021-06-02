@@ -1,4 +1,5 @@
 //run
+
 const { exec } = require('child_process')
 exec('hexo g && hexo s',(error, stdout, stderr) => {
     if(error){
