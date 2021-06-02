@@ -151,7 +151,7 @@ deploy:
 
 #漫画轮播
 live2d:
-  enable: true
+  enable: false
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
@@ -201,4 +201,4 @@ algolia:
 lazyload:
   enable: true  # 是否开启图片懒加载
   onlypost: true  # 是否只对文章的图片做懒加载
-  loadingImg: https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg # eg ./images/loading.gif
+  loadingImg: /medias/loading.gif #https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg # eg ./images/loading.gif
