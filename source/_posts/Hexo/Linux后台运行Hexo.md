@@ -10,7 +10,7 @@ tags:
   - 后台运行
 categories:
   - Hexo
-password: 123456
+password:
 summary: Linux后台运行Hexo
 abbrlink: 8631bdb3
 date: 2021-06-02 14:50:27
