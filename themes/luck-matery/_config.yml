@@ -246,7 +246,7 @@ clicklove:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /medias/pic1.jpg
+  avatar: /medias/pic1.png
   career: 程序猿
   introduction: 如果你想成功，就要以恒心为良友，以经验为参谋，以谨慎为兄弟，以希望为哨兵。.
 
