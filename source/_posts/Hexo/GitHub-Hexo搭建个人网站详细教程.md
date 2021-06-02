@@ -28,7 +28,7 @@ password:
 
 ### **什么是Hexo ?**
 
-![图一](https://raw.githubusercontent.com/0cmg/imgtu/develop/images/hexo/20210527092725.png)
+![图一](https://cdn.jsdelivr.net/gh/0cmg/imgtu@develop/images/hexo/20210527092725.png)
 
 >Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub上，是搭建博客的首选框架。这里我们选用的是GitHub。Hexo同时也是GitHub上的开源项目，参见：[hexojs/hexo](https://link.zhihu.com/?target=https%3A//github.com/hexojs/hexo) 如果想要更加全面的了解Hexo，可以到其官网 [Hexo](https://link.zhihu.com/?target=https%3A//hexo.io/) 了解更多的细节。
 
