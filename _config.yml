@@ -14,8 +14,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://0cmg.github.io
-root: /cmg.githua.io/
+url: https://www.ocmg.top
+root: /
 #permalink: :year/:month/:day/:urlname/
 permalink: p/:abbrlink.html # p 是自定义的前缀
 abbrlink:
